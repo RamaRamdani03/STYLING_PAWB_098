@@ -1,0 +1,43 @@
+<main class="contact-container">
+    <div class="form-container">
+        <h1>Contact Us</h1>
+        <form action="/submit-contact" method="POST" onsubmit="return showAlert()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required placeholder="Enter your address">
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<script>
+    // Fungsi untuk menampilkan alert setelah form disubmit
+    function showAlert() {
+        // Mendapatkan input dari form
+        let name = document.getElementById('name').value;
+        let phone = document.getElementById('phone').value;
+        let address = document.getElementById('address').value;
+
+        // Menampilkan alert dengan pesan konfirmasi
+        alert('Terima kasih ' + name + '!\n\nInformasi anda telah berhasil dikirim.\n\nNama: ' + name + '\nNo. Telepon: ' + phone + '\nAlamat: ' + address);
+        
+        // Menghindari pengiriman form yang sesungguhnya agar alert dapat tampil terlebih dahulu
+        return false;
+    }
+</script>
+
+<link rel="stylesheet" href="/css/contact.css">

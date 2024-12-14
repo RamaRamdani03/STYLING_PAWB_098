@@ -1,0 +1,9 @@
+/* Title Styling */
+h1 {
+    color: #343a40;
+    font-size: 3rem; /* Large font size for the title */
+    margin-bottom: 25px;
+    font-weight: 600; /* Slightly heavier for better prominence */
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}

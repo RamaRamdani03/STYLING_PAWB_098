@@ -1,0 +1,218 @@
+/*Navbar*/
+nav.navbar {
+    position: fixed;
+    top: 0;  /* Tetapkan di atas */
+    left: 0;  /* Agar navbar melekat pada sisi kiri halaman */
+    width: 100%;  /* Navbar memenuhi lebar halaman */
+    z-index: 1000;  /* Agar navbar tidak tertutup konten lain */
+    background-color: #f8f9fa;  /* Anda bisa menyesuaikan warna latar belakang navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Memberikan efek bayangan agar navbar sedikit lebih mencolok */
+}
+
+/* Reset default padding and margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    flex-grow: 1;  /* Memastikan konten utama mengambil ruang yang tersisa */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: antiquewhite; /* Light background for a clean look */
+    color: #495057; /* Darker text for good contrast */
+    padding: 20px;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Membuat body minimal memiliki tinggi penuh */  
+}
+
+/* Main container for the page */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Header for the page */
+h1, h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+form:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Form input fields and labels */
+.form-label {
+    font-size: 1.2rem;
+    color: #495057;
+    font-weight: 600;
+}
+
+.form-control {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Buttons Styling */
+button.btn {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Primary button */
+button.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Secondary (Cancel) button */
+button.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+button.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+/* Buttons inside list */
+button.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: white;
+    margin-right: 10px;
+}
+
+button.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Danger (Delete) button */
+button.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+button.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Todo list items */
+.todo-list ul {
+    list-style-type: none;
+}
+
+.todo-list .list-group-item {
+    background-color: #ffffff; /* Warna latar belakang standar */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan ringan */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative; /* Untuk positioning child elemen */
+}
+
+.todo-list .list-group-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Meningkatkan intensitas bayangan */
+    transform: translateY(-5px); /* Memberikan efek mengangkat */
+    background-color: #f9f9f9; /* Sedikit warna terang pada latar */
+}
+
+.todo-list .list-group-item button,
+.todo-list .list-group-item a {
+    transition: color 0.3s ease;
+}
+
+.todo-list .list-group-item:hover button,
+.todo-list .list-group-item:hover a {
+    color: #007bff; /* Warna saat di-hover */
+}
+
+/* Edit form (initially hidden) */
+#edit-form {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Style when list is empty */
+.todo-list p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    text-align: center;
+}
+
+/* Styling for links */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 767px) {
+    h1, h2 {
+        font-size: 2rem; /* Reduce heading size */
+        text-align: center;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    button.btn {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .todo-list .list-group-item {
+        padding: 10px;
+    }
+}

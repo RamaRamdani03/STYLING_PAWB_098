@@ -1,0 +1,203 @@
+/* Basic Body Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: antiquewhite;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    /* Improve line-height for better readability */
+}
+
+/* Main Container Padding */
+main.container {
+    padding: 50px 15px;
+}
+
+/* Header Styles */
+h1 {
+    font-size: 3rem;
+    /* Increased font size for better prominence */
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Paragraph Text Styling */
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Styling for Feature Section Cards (col-md-4) */
+.col-md-4 {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+    height: 400px; /* Ensure cards are of uniform height */
+    max-width: 350px;
+    width: 100%;
+    text-align: center; /* Center-align text inside the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute items evenly inside */
+    align-items: center; /* Center items horizontally */
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+    .col-md-4 {
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+.col-md-4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.col-md-4 p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+/* Pengaturan gambar dalam card */
+.col-md-4 img.img-fluid {
+    max-width: 70%;
+    max-height: 200px;
+    object-fit: contain;
+    margin: auto;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom Effect on Image Hover */
+img.img-fluid:hover {
+    transform: scale(1.1);
+}
+
+img.img-fluid {
+    max-width: 80%;
+}
+
+/* Center Align the Row */
+.row.justify-content-center {
+    justify-content: center;
+}
+
+/* Margin Top for Feature Section */
+.row.mt-5 {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Text Alignment */
+.text-center {
+    text-align: center;
+}
+
+/* Ensure the images in the feature section are responsive and well spaced */
+.col-md-4 img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.col-md-4 h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+/* Styling Links (if any in the future) */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button Custom Styling */
+.btn-custom {
+    background-color: #3498db;
+    border: none;
+    /* Cleaned up the border style */
+    color: #ffffff;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.btn-custom:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Contact Section Styling */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    /* Add space above */
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    /* Larger heading */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-section .btn-custom {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+.contact-section .btn-custom:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .btn-custom {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .col-md-4 {
+        margin-top: 20px;
+    }
+}
